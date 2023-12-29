@@ -38,7 +38,7 @@ function generateProductHTML(product) {
 }
 
 
-let PanchkarmaAyurved = "https://script.google.com/macros/s/AKfycbw3ph8dJ9YLLC7sSEnpcTzUNulmqjqr2edd61zTUtV_ZnF2-tFYHmeZyAgWhJbHUI0m/exec?action=getUsers"
+let PanchkarmaAyurved = "https://script.google.com/macros/s/AKfycbyALuprSfDSdy4uK5nbgOOY_2EhHg_j6Obm_6qqYqEzCXCha_yJXNPem2hKrr-NfMq4/exec?action=getUsers"
 
 fetch(PanchkarmaAyurved)
   .then(response => response.json())
@@ -363,9 +363,8 @@ function generateProductHTML(HospitalScrubsproduct) {
 }
 
 
-
-
 function animation(){
   alert("Coming Soon")
 }
+
 
