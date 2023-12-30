@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>SNJ Distribution</title>
   <meta charset="utf-8">
@@ -20,8 +19,15 @@
   <link rel="stylesheet" href="css/style.css">
   <script
     nonce="9d412fb2-dd65-421d-a930-6c579d844752">(function (w, d) { !function (bb, bc, bd, be) { bb[bd] = bb[bd] || {}; bb[bd].executed = []; bb.zaraz = { deferred: [], listeners: [] }; bb.zaraz.q = []; bb.zaraz._f = function (bf) { return async function () { var bg = Array.prototype.slice.call(arguments); bb.zaraz.q.push({ m: bf, a: bg }) } }; for (const bh of ["track", "set", "debug"]) bb.zaraz[bh] = bb.zaraz._f(bh); bb.zaraz.init = () => { var bi = bc.getElementsByTagName(be)[0], bj = bc.createElement(be), bk = bc.getElementsByTagName("title")[0]; bk && (bb[bd].t = bc.getElementsByTagName("title")[0].text); bb[bd].x = Math.random(); bb[bd].w = bb.screen.width; bb[bd].h = bb.screen.height; bb[bd].j = bb.innerHeight; bb[bd].e = bb.innerWidth; bb[bd].l = bb.location.href; bb[bd].r = bc.referrer; bb[bd].k = bb.screen.colorDepth; bb[bd].n = bc.characterSet; bb[bd].o = (new Date).getTimezoneOffset(); if (bb.dataLayer) for (const bo of Object.entries(Object.entries(dataLayer).reduce(((bp, bq) => ({ ...bp[1], ...bq[1] })), {}))) zaraz.set(bo[0], bo[1], { scope: "page" }); bb[bd].q = []; for (; bb.zaraz.q.length;) { const br = bb.zaraz.q.shift(); bb[bd].q.push(br) } bj.defer = !0; for (const bs of [localStorage, sessionStorage]) Object.keys(bs || {}).filter((bu => bu.startsWith("_zaraz_"))).forEach((bt => { try { bb[bd]["z_" + bt.slice(7)] = JSON.parse(bs.getItem(bt)) } catch { bb[bd]["z_" + bt.slice(7)] = bs.getItem(bt) } })); bj.referrerPolicy = "origin"; bj.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(bb[bd]))); bi.parentNode.insertBefore(bj, bi) };["complete", "interactive"].includes(bc.readyState) ? zaraz.init() : bb.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
 </head>
 
+<style>
+  .alert {
+      display: none;
+  }
+</style>
 <body>
   <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row" id="mobile-menu">
     <div class="container">
@@ -108,26 +114,26 @@
     <div class="container">
       <div class="row d-flex align-items-stretch no-gutters">
         <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-          
-          <form id="myForm">
+          <div class="alert alert-success p-2 text-center" role="alert">
+            Form Submitted Successfully!
+        </div>
+          <form id="contactForm">
             <div class="form-group">
-              <input onkeydown="return /[a-z]/i.test(event.key)" class="form-control" id="name" placeholder="Your Name" required>
-              <p class="errormessage" id="nameError" class="error"></p>
+              <input onkeydown="return /[a-z]/i.test(event.key)" class="form-control" id="name" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input class="form-control" id="email" placeholder="Your Email" required>
-              <p class="errormessage" id="emailError" class="error"></p>
+              <input class="form-control" id="email" name="email" placeholder="Your Email" required>
+              <p class="errorMessagemail erroralert p-2"></p>
             </div>
             <div class="form-group">
-              <input class="form-control" id="phone" placeholder="Phone" required>
-              <p class="errormessage" id="phoneError" class="error"></p>
+              <input class="form-control" id="phone" name="phone" placeholder="Phone" required>
+              <p class="errorMessage erroralert p-2"></p>
             </div>
             <div class="form-group">
               <textarea id="description" name="description" cols="30" rows="7" class="form-control" placeholder="Brief Description about your requirement" required></textarea>
-              <p class="errormessage" id="descriptionError" class="error"></p>
             </div>
             <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            <button type="submit" class="btn btn-primary py-3 px-5">Submit</button>
             </div>
           </form>
 
@@ -257,26 +263,13 @@
   <script src="js/script.js"></script>
   <script src="js/contact.js"></script>
 
-  <!-- Add this script tag to the head of your HTML file -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-
-
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-23581568-13');
   </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
-    integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-    data-cf-beacon='{"rayId":"822ef6bb2a0e85c3","b":1,"version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
-    crossorigin="anonymous"></script>
 </body>
-
-<!-- Mirrored from preview.colorlib.com/theme/drcare/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Nov 2023 15:49:50 GMT -->
-
 </html>

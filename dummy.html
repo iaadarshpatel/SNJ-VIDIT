@@ -1,16 +1,54 @@
-          <div class="col-sm-2 clients_border">National Health Mission, Dehradun</div>
-          <div class="col-sm-2 clients_border">Office of the District Magistrate: East Delhi</div>
-          <div class="col-sm-2 clients_border">Mela Adhikari Kumbh, Haridwar</div>
-          <div class="col-sm-2 clients_border">Northern Railway Jagadhari</div>
-          <div class="col-sm-2 clients_border">Revenue Department Delhi</div>
-          <div class="col-sm-2 clients_border">Chief Medical Officer, Bageshwar</div>
-          <div class="col-sm-2 clients_border">Chief Medical Officer, Almora</div>
-          <div class="col-sm-2 clients_border">District Election Officer of Various District of Uttar Pradesh</div>
-          <div class="col-sm-2 clients_border">Lieutenant Governor Secretariat Jammu and Kashmir</div>
-          <div class="col-sm-2 clients_border">Shri Amarnath ji Shrine Board, Jammu</div>
-          <div class="col-sm-2 clients_border">Bureau of Indian Standard Ghaziabad</div>
-          <div class="col-sm-2 clients_border">Chief Medical Officer Tehri</div>
-          <div class="col-sm-2 clients_border">Chief Medical Officer Haridwar</div>
-          <div class="col-sm-2 clients_border">District Election Officer Uttarkashi</div>
-          <div class="col-sm-2 clients_border">HomeGuards and Nagrik Suraksha Office, Dehradun</div>
-          <div class="col-sm-2 clients_border">Chief Medical Officer Udham Singh Nagar</div>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+</head>
+<style>
+    .alert {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h1 class="text-center text-success mb-2">Contact Me</h1>
+                <div class="alert alert-success" role="alert">
+                    Form Submitted Successfully!
+                  </div>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input onkeydown="return /[a-z]/i.test(event.key)" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="phone" name="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="description" name="description" cols="30" rows="7" class="form-control" placeholder="Brief Description about your requirement" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary py-3 px-5">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  <script src="js/dummy.js"></script>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

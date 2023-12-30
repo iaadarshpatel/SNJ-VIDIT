@@ -1347,6 +1347,8 @@ fieldset:disabled a.btn {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+  background-color: #00727a;
+  color: #fff;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -4660,6 +4662,6 @@ p {
   background: #00727a !important;
 }
 
-.errormessage{
+.erroralert{
   color: red;
 }
